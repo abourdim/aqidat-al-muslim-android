@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=1024,initial-scale=1">
-<title>{{APP_NAME}} — feature graphic</title>
+<title>Aqidat al-Muslim — feature graphic</title>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { width: 1024px; height: 500px; overflow: hidden; }
   body {
-    background: linear-gradient(135deg, {{BRAND_PRIMARY}} 0%, {{BRAND_GRADIENT_MID}} 50%, {{BRAND_ACCENT}} 100%);
+    background: linear-gradient(135deg, #227657 0%, #1E5B45 50%, #4DBACB 100%);
     display: flex;
     align-items: center;
     padding: 0 60px;
@@ -80,7 +80,7 @@
     position: absolute; inset: 0;
     border: 6px solid rgba(255,255,255,0.4);
     border-radius: 50%;
-    box-shadow: 0 0 60px color-mix(in srgb, {{BRAND_ACCENT}} 50%, transparent), inset 0 0 40px rgba(255,255,255,0.1);
+    box-shadow: 0 0 60px color-mix(in srgb, #4DBACB 50%, transparent), inset 0 0 40px rgba(255,255,255,0.1);
   }
   .ring::before, .ring::after {
     content: '';
@@ -98,15 +98,15 @@
 </head>
 <body>
   <div class="left">
-    <div class="kicker">{{TITLE_EN}} · {{TITLE_FR}}</div>
-    <div class="title">{{TITLE_AR}}</div>
-    <div class="subtitle">{{TAGLINE_EN}}</div>
-    <div class="tagline">{{TAGLINE_AR}}</div>
+    <div class="kicker">The Muslim's Creed · Aqidat al-Muslim</div>
+    <div class="title">عقيدة المسلم</div>
+    <div class="subtitle">The Muslim's Creed — from Sheikh al-Ghazali's legacy</div>
+    <div class="tagline">عقيدة المسلم — من تراث الشيخ محمد الغزالي</div>
     <div class="attribution">عربي · English · Français</div>
   </div>
   <div class="right">
     <div class="ring"></div>
-    <div class="emoji">{{EMOJI}}</div>
+    <div class="emoji">🕌</div>
   </div>
 </body>
 </html>

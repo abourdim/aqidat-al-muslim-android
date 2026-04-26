@@ -1,6 +1,6 @@
 {
-  "appId": "{{APP_ID}}",
-  "appName": "{{APP_NAME}}",
+  "appId": "org.workshopdiy.aqidatalmuslim",
+  "appName": "Aqidat al-Muslim",
   "webDir": "www",
   "android": {
     "allowMixedContent": false,
@@ -10,14 +10,14 @@
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 1500,
-      "backgroundColor": "{{BRAND_PRIMARY}}",
+      "backgroundColor": "#227657",
       "androidSplashResourceName": "splash",
       "androidScaleType": "CENTER_CROP",
       "showSpinner": false
     },
     "StatusBar": {
       "style": "DARK",
-      "backgroundColor": "{{BRAND_PRIMARY}}"
+      "backgroundColor": "#227657"
     }
   }
 }

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="ocean">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="عقيدة المسلم — تطبيق تفاعلي مبني على كتاب الشيخ محمد الغزالي. The Muslim's Creed — Interactive app based on Sheikh Mohammed al-Ghazali's book.">
+    <meta property="og:title" content="عقيدة المسلم — The Muslim's Creed">
+    <meta property="og:description" content="أصول الإيمان بأسلوب سهل وعملي. Foundations of Islamic faith made simple.">
+    <meta property="og:type" content="website">
+    <title>The Muslim's Creed — عقيدة المسلم</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Lora:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#E3F2FD">
+    <link rel="stylesheet" href="genius.css">
+</head>
+<body>
+
+<!-- Confetti Canvas -->
+<canvas id="confettiCanvas"></canvas>
+
+<!-- Splash Screen -->
+<div class="splash" id="splash" onclick="dismissSplash()">
+  <div class="splash-inner">
+    <div class="splash-sacred">
+      <div class="splash-bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+      <div class="splash-ayah">آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ</div>
+    </div>
+    <div class="splash-app">
+      <div class="splash-icon">☝️</div>
+      <div class="splash-title">عقيدة المسلم</div>
+      <div class="splash-subtitle" id="splashSub">أصول الإيمان بأسلوب سهل وعملي</div>
+      <div class="splash-features" id="splashFeatures"></div>
+      <div class="splash-countdown"><span class="splash-count" id="splashCount">5</span></div>
+      <div class="splash-hint" id="splashHint">اضغط للتخطي</div>
+    </div>
+    <a class="splash-credit" href="https://workshop-diy.org" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+      <span>Powered by workshop-diy.org</span>
+    </a>
+  </div>
+</div>
+
+<div class="deco-band top-band" aria-hidden="true"></div>
+
+<!-- Sacred Bar -->
+<div class="sacred-bar">
+  <div class="sacred-bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+  <div class="sacred-ayah">آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ</div>
+</div>
+
+<!-- Header -->
+<header class="app-header">
+  <div class="header-inner">
+    <a href="https://workshop-diy.org" target="_blank" rel="noopener" class="workshop-logo" id="workshopLogo" title="workshop-diy.org">
+      <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1565C0"/>
+            <stop offset="50%" stop-color="#42A5F5"/>
+            <stop offset="100%" stop-color="#90CAF9"/>
+          </linearGradient>
+        </defs>
+        <circle cx="18" cy="18" r="17" fill="url(#badgeGrad)" stroke="#1565C0" stroke-width="1"/>
+        <circle cx="18" cy="18" r="14" fill="none" stroke="rgba(255,255,255,.3)" stroke-width=".5"/>
+        <text x="18" y="23" text-anchor="middle" fill="#fff" font-family="Lora,serif" font-weight="700" font-size="16">W</text>
+        <circle cx="18" cy="5" r="1.2" fill="rgba(255,255,255,.5)"/>
+        <circle cx="18" cy="31" r="1.2" fill="rgba(255,255,255,.5)"/>
+        <circle cx="5" cy="18" r="1.2" fill="rgba(255,255,255,.5)"/>
+        <circle cx="31" cy="18" r="1.2" fill="rgba(255,255,255,.5)"/>
+      </svg>
+    </a>
+    <div class="logo">
+      <span class="logo-icon">☝️</span>
+      <h1 id="appTitle">عقيدة المسلم</h1>
+    </div>
+    <nav class="header-controls">
+      <div class="lang-switch">
+        <button class="lang-opt active" data-lang="ar" onclick="setLang('ar')"><svg width="20" height="14" viewBox="0 0 30 20"><rect width="15" height="20" fill="#006233"/><rect x="15" width="15" height="20" fill="#fff"/><circle cx="16.5" cy="10" r="5" fill="#D21034"/><circle cx="18" cy="10" r="4" fill="#fff"/><circle cx="17" cy="10" r="4" fill="#006233"/><polygon points="17,6 18,9 21,9 18.5,11 19.5,14 17,12 14.5,14 15.5,11 13,9 16,9" fill="#D21034" transform="scale(0.6) translate(14,7)"/></svg></button>
+        <button class="lang-opt" data-lang="en" onclick="setLang('en')"><svg width="20" height="14" viewBox="0 0 30 20"><rect width="30" height="20" fill="#012169"/><path d="M0,0L30,20M30,0L0,20" stroke="#fff" stroke-width="3"/><path d="M0,0L30,20M30,0L0,20" stroke="#C8102E" stroke-width="1.5"/><rect x="12" width="6" height="20" fill="#fff"/><rect y="7" width="30" height="6" fill="#fff"/><rect x="13" width="4" height="20" fill="#C8102E"/><rect y="8" width="30" height="4" fill="#C8102E"/></svg></button>
+        <button class="lang-opt" data-lang="fr" onclick="setLang('fr')"><svg width="20" height="14" viewBox="0 0 30 20"><rect width="10" height="20" fill="#002395"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ED2939"/></svg></button>
+      </div>
+      <button class="theme-btn" id="themeToggle" onclick="cycleTheme()" aria-label="Change theme"><span class="theme-icon" id="themeIcon">🌊</span></button>
+      <button class="narrator-btn" id="narratorMainBtn" onclick="narratorTogglePanel()" aria-label="Narrator">🎧</button>
+      <button class="help-btn" id="helpBtn" onclick="toggleHelp()" aria-label="Help">?</button>
+    </nav>
+  </div>
+</header>
+
+<!-- XP Bar -->
+<div class="xp-container" id="xpBar"></div>
+
+<!-- Main Content -->
+<main class="content">
+
+  <!-- TAB: HOME -->
+  <section class="panel" id="panel-home">
+    <div class="daily-card" id="dailyCard"></div>
+    <div class="home-grid" id="homeGrid"></div>
+  </section>
+
+  <!-- TAB: CREED -->
+  <section class="panel" id="panel-creed">
+    <h2 class="section-title" id="creedTitle">أصول العقيدة</h2>
+    <p class="section-desc" id="creedDesc">٢٠ أصلاً من أصول الإيمان</p>
+    <div id="creedContainer"></div>
+  </section>
+
+  <!-- TAB: PILLARS -->
+  <section class="panel" id="panel-pillars">
+    <h2 class="section-title" id="pillarsTitle">أركان العبادة</h2>
+    <p class="section-desc" id="pillarsDesc">كيف تتحول العقيدة إلى عمل يومي</p>
+    <div id="pillarsContainer"></div>
+  </section>
+
+  <!-- TAB: QUIZ -->
+  <section class="panel" id="panel-quiz">
+    <h2 class="section-title" id="quizTitle">🏆 من سيكون العالم؟</h2>
+    <p class="section-desc" id="quizDesc">اختبر معلوماتك في العقيدة الإسلامية</p>
+    <div id="quizContainer"></div>
+    <div id="quizResult" class="quiz-result hidden"></div>
+  </section>
+
+  <!-- TAB: ABOUT -->
+  <section class="panel active" id="panel-about">
+    <div id="aboutContainer"></div>
+  </section>
+
+</main>
+
+<!-- Help Panel -->
+<div id="helpPanel" class="help-panel hidden">
+  <div class="help-header">
+    <span id="helpTitle">❓ مساعدة</span>
+    <button onclick="toggleHelp()" class="help-close">&#10005;</button>
+  </div>
+  <div class="help-body" id="helpBody"></div>
+</div>
+
+<!-- Narrator Panel -->
+<div id="narratorPanel" class="narrator-panel hidden">
+  <div class="narrator-header">
+    <span class="narrator-title" id="narratorTitle">🎧 Narrator</span>
+    <button onclick="narratorTogglePanel()" class="help-close">&#10005;</button>
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-modes">
+      <button class="narrator-mode-btn" onclick="narratorPlayPage()">
+        <span>▶️</span> <span class="narrator-mode-label" data-nr="page">Read this page</span>
+      </button>
+      <button class="narrator-mode-btn" onclick="narratorPlayBook()">
+        <span>📖</span> <span class="narrator-mode-label" data-nr="book">Read as a book</span>
+      </button>
+    </div>
+    <div class="narrator-controls">
+      <button class="narrator-ctrl" onclick="narratorPrev()">⏮️</button>
+      <button class="narrator-ctrl narrator-ctrl-main" id="narratorPlayPause" onclick="narratorPause()">▶️</button>
+      <button class="narrator-ctrl" onclick="narratorNext()">⏭️</button>
+      <button class="narrator-ctrl" onclick="narratorStop()">⏹️</button>
+    </div>
+    <div class="narrator-progress-wrap">
+      <div class="narrator-bar-bg"><div class="narrator-bar-fill" id="narratorBar"></div></div>
+      <span class="narrator-progress-text" id="narratorProgress">0/0</span>
+    </div>
+    <div class="narrator-settings">
+      <div class="narrator-setting">
+        <label data-nr="voice">Voice</label>
+        <select id="narratorVoice" onchange="narratorVoiceChange(this.value)" onfocus="narratorPopulateVoices()"></select>
+      </div>
+      <div class="narrator-setting">
+        <label data-nr="speed">Speed</label>
+        <input type="range" id="narratorSpeed" min="0.5" max="2" step="0.25" value="1" oninput="narratorSpeedChange(this.value)">
+        <span id="narratorSpeedLabel">1x</span>
+      </div>
+      <div class="narrator-setting">
+        <label data-nr="pitch">Pitch</label>
+        <input type="range" id="narratorPitch" min="0.5" max="1.5" step="0.1" value="1" oninput="narratorPitchChange(this.value)">
+        <span id="narratorPitchLabel">1.0</span>
+      </div>
+      <div class="narrator-setting">
+        <label data-nr="loop">Loop card</label>
+        <select id="narratorLoop" onchange="narratorLoopChange(this.value)">
+          <option value="0" data-nr="off">Off</option>
+          <option value="2">2x</option>
+          <option value="3">3x</option>
+          <option value="5">5x</option>
+          <option value="10">10x</option>
+        </select>
+      </div>
+      <div class="narrator-setting">
+        <label data-nr="sleep">Sleep timer</label>
+        <select id="narratorSleep" onchange="narratorSleepChange(this.value)">
+          <option value="0" data-nr="off">Off</option>
+          <option value="5">5 min</option>
+          <option value="15">15 min</option>
+          <option value="30">30 min</option>
+        </select>
+      </div>
+      <div class="narrator-toggles">
+        <label class="narrator-toggle"><input type="checkbox" checked onchange="narratorKaraokeToggle(this.checked)"> <span data-nr="karaoke">Karaoke</span></label>
+        <label class="narrator-toggle"><input type="checkbox" checked onchange="narratorAutoScrollToggle(this.checked)"> <span data-nr="autoscroll">Auto-scroll</span></label>
+        <label class="narrator-toggle"><input type="checkbox" onchange="narratorDuoToggle(this.checked)"> <span data-nr="duo">Duo (AR+FR)</span></label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="deco-band bottom-band" aria-hidden="true"></div>
+
+<!-- Toast -->
+<div id="toast" class="toast"><span id="toastMsg"></span></div>
+
+<!-- Scroll to top -->
+<button id="scrollTop" class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+<!-- Dua float -->
+<button id="duaBtn" class="dua-float" onclick="toggleDuaPanel()">🤲</button>
+<div id="duaPanel" class="dua-panel hidden">
+  <div class="dua-panel-header">
+    <span id="duaPanelTitle">🤲 أدعية الإيمان</span>
+    <button onclick="toggleDuaPanel()" class="help-close">&#10005;</button>
+  </div>
+  <div id="duaPanelContent" class="dua-panel-body"></div>
+</div>
+
+<!-- Bottom Tabs -->
+<nav class="tabs" role="tablist">
+  <div class="tabs-meta">
+    <div class="ticker-wrap">
+      <div class="ticker-text" id="tickerText"></div>
+    </div>
+  </div>
+  <div class="tabs-row">
+    <button class="tab" data-tab="home"><span class="ti">🏠</span><span class="tl" id="tabHome">الرئيسية</span></button>
+    <button class="tab" data-tab="creed"><span class="ti">☝️</span><span class="tl" id="tabCreed">العقيدة</span></button>
+    <button class="tab" data-tab="pillars"><span class="ti">🕌</span><span class="tl" id="tabPillars">الأركان</span></button>
+    <button class="tab" data-tab="quiz"><span class="ti">🏆</span><span class="tl" id="tabQuiz">اختبار</span></button>
+    <button class="tab active" data-tab="about"><span class="ti">📖</span><span class="tl" id="tabAbout">الكتاب</span></button>
+  </div>
+</nav>
+
+<script src="app.js"></script>
+<script src="narrator.js"></script>
+<script src="genius.js"></script><script>document.addEventListener('DOMContentLoaded',function(){if(window.geniusInit)geniusInit({particles:{color1:'rgba(21,101,192,0.2)',color2:'rgba(66,165,245,0.12)',count:18},appKey:'aqm',darkTheme:'night'})});</script>
+</body>
+</html>

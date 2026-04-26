@@ -1,0 +1,102 @@
+/* ═══════════════ GENIUS SHARED CSS ═══════════════ */
+/* Include in all 6 apps for premium design features */
+
+/* 1. PARTICLES CANVAS */
+#particlesCanvas{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.4}
+
+/* 2. PAGE TRANSITIONS */
+.panel-exit{animation:panelOut .25s ease forwards}
+.panel-enter{animation:panelIn .3s ease forwards}
+@keyframes panelOut{to{opacity:0;transform:translateX(-25px)}}
+@keyframes panelIn{from{opacity:0;transform:translateX(25px)}to{opacity:1;transform:translateX(0)}}
+[dir="rtl"] .panel-exit{animation-name:panelOutRTL}
+[dir="rtl"] .panel-enter{animation-name:panelInRTL}
+@keyframes panelOutRTL{to{opacity:0;transform:translateX(25px)}}
+@keyframes panelInRTL{from{opacity:0;transform:translateX(-25px)}to{opacity:1;transform:translateX(0)}}
+
+/* 3. GLASSMORPHISM */
+.help-panel,.dua-panel{backdrop-filter:blur(16px) saturate(180%)!important;-webkit-backdrop-filter:blur(16px) saturate(180%)!important;background:rgba(255,255,255,.7)!important;border:1px solid rgba(255,255,255,.3)!important}
+[data-theme="night"] .help-panel,[data-theme="night"] .dua-panel,
+[data-theme="fajr"] .help-panel,[data-theme="fajr"] .dua-panel,
+[data-theme="haqiqa"] .help-panel,[data-theme="haqiqa"] .dua-panel,
+[data-theme="storm"] .help-panel,[data-theme="storm"] .dua-panel,
+[data-theme="history"] .help-panel,[data-theme="history"] .dua-panel,
+[data-theme="thunderbolt"] .help-panel,[data-theme="thunderbolt"] .dua-panel{
+  background:rgba(30,30,40,.75)!important;border:1px solid rgba(255,255,255,.1)!important
+}
+
+/* 4. SKELETON LOADING */
+.skeleton-card{height:80px;border-radius:var(--r,14px);margin-bottom:10px;background:linear-gradient(90deg,var(--acc,#f0f0f0) 25%,var(--card,#fff) 50%,var(--acc,#f0f0f0) 75%);background-size:200% 100%;animation:shimmer 1.5s infinite}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* 5. SCROLL REVEAL — subtle, never hides content */
+.genius-reveal{opacity:.85;transform:translateY(8px);transition:opacity .4s ease,transform .4s ease}
+.genius-reveal.revealed{opacity:1;transform:translateY(0)}
+
+/* 5b. UNIVERSAL BOTTOM TABS — hajj-guide pill style */
+.bottom-tabs,.tabs{display:flex!important;flex-direction:column!important;background:var(--bg-card,var(--card,#fff));border-top:1px solid var(--border,var(--brd,#e8dfd2));position:fixed;bottom:0;left:0;right:0;z-index:90}
+.tabs-row{display:flex!important;flex-direction:row!important;overflow-x:auto;gap:4px;padding:6px 8px 8px;scrollbar-width:none;justify-content:center;width:100%}
+.tabs-row::-webkit-scrollbar{display:none}
+.tab,.tab-btn{border:none!important;background:transparent!important;padding:8px 12px!important;cursor:pointer;font-size:.75rem;font-weight:600;color:var(--text-light,var(--t3,#9a8c7a));display:flex!important;flex-direction:row!important;align-items:center!important;gap:6px!important;transition:.2s;border-radius:20px!important;white-space:nowrap;flex-shrink:0}
+.tab:hover,.tab-btn:hover{color:var(--text-primary,var(--t1,#2c2417));background:rgba(200,168,78,.06)!important}
+.tab.active,.tab-btn.active{color:#fff!important;background:var(--primary,var(--gold,#c8a84e))!important;box-shadow:0 2px 8px rgba(0,0,0,.2)!important}
+.tab.active::after,.tab-btn.active::after{display:none!important}
+.ti,.tab-icon{font-size:.95rem!important;line-height:1}
+.tl,.tab-label{font-size:.72rem!important;letter-spacing:.3px}
+.tabs-meta{padding:3px 0 0;overflow:hidden}
+.ticker-wrap{overflow:hidden;width:100%;-webkit-mask-image:linear-gradient(to right,transparent,black 6%,black 94%,transparent);mask-image:linear-gradient(to right,transparent,black 6%,black 94%,transparent)}
+.ticker-text{display:inline-flex;white-space:nowrap;color:var(--t2,#6b5d4d);font-size:.62rem;opacity:.75}
+.ticker-text .tc{white-space:nowrap;flex-shrink:0}
+@keyframes tickerMarquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* 6. READING MODE */
+body.reading-mode .app-header,
+body.reading-mode .tabs,
+body.reading-mode .scroll-top,
+body.reading-mode .dua-float,
+body.reading-mode .dua-panel,
+body.reading-mode .help-panel,
+body.reading-mode .app-footer,
+body.reading-mode .sacred-bar,
+body.reading-mode #particlesCanvas,
+body.reading-mode .bottom-tabs,
+body.reading-mode [class*="deco-band"]{display:none!important}
+body.reading-mode .content{max-width:700px;padding:30px 24px 40px;font-size:1.05rem;line-height:1.9}
+body.reading-mode .panel.active{display:block!important}
+.reading-toggle{position:fixed;top:70px;left:16px;z-index:95;width:32px;height:32px;border-radius:50%;border:1px solid var(--brd,#ddd);background:var(--acc,#f5f5f5);cursor:pointer;font-size:.85rem;display:flex;align-items:center;justify-content:center;transition:.3s;opacity:.5}
+.reading-toggle:hover{opacity:1;transform:scale(1.1)}
+body.reading-mode .reading-toggle{position:fixed;top:12px;right:12px;left:auto;opacity:1;background:var(--primary,#ff8c61);color:#fff;border-color:transparent;z-index:9999}
+[dir="rtl"] .reading-toggle{left:auto;right:16px}
+[dir="rtl"] body.reading-mode .reading-toggle{right:12px;left:auto}
+
+/* 7. TYPEWRITER */
+.typewriter-text{display:inline-block;overflow:hidden;white-space:nowrap;border-right:2px solid var(--primary,#ff8c61);animation:typewriterBlink .7s step-end infinite;max-width:0;transition:max-width 3s steps(60,end)}
+.typewriter-text.typing{max-width:100%}
+@keyframes typewriterBlink{50%{border-color:transparent}}
+[dir="rtl"] .typewriter-text{border-right:none;border-left:2px solid var(--primary,#ff8c61);direction:rtl}
+
+/* 8. ANIMATED COUNTERS */
+.genius-counter{display:inline-block;font-variant-numeric:tabular-nums}
+
+/* 9. MICRO-INTERACTIONS */
+.tab:active,.quiz-opt:active,.habit-item:active,.home-card:active,
+button:active{transform:scale(.95)!important;transition:transform .05s!important}
+.home-card,.principle-card,.anxiety-card,.myth-card,.truth-card,
+.ailment-card,.remedy-card,.essay-card,.timeline-card,.cause-card,
+.solution-card,.explore-card{transition:transform .2s ease,box-shadow .2s ease!important}
+
+/* 10. SWIPE INDICATOR */
+.swipe-hint{text-align:center;font-size:.65rem;color:var(--t3,#999);opacity:.5;padding:4px 0;letter-spacing:.1em}
+
+/* 11. EASTER EGG */
+.easter-egg{position:fixed;inset:0;z-index:10001;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.8);animation:easterIn .5s ease}
+.easter-egg-inner{text-align:center;padding:40px;background:var(--card,#fff);border-radius:24px;border:3px solid transparent;background-clip:padding-box;position:relative;max-width:400px;margin:20px;animation:easterPop .5s ease .3s both}
+.easter-egg-inner::before{content:'';position:absolute;inset:-3px;border-radius:26px;background:linear-gradient(135deg,#FFD700,#FFA500,#FFD700,#FFF8DC,#FFD700);z-index:-1;animation:goldShimmer 3s linear infinite}
+@keyframes goldShimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.easter-egg-inner{background-size:300% 300%}
+.easter-egg .ee-emoji{font-size:4rem;margin-bottom:16px}
+.easter-egg .ee-title{font-family:var(--fd,'Amiri',serif);font-size:1.5rem;color:var(--primary,#c8a84e);margin-bottom:12px}
+.easter-egg .ee-text{font-size:.9rem;color:var(--t2,#666);line-height:1.7;margin-bottom:16px}
+.easter-egg .ee-close{border:none;background:var(--primary,#c8a84e);color:#fff;padding:10px 28px;border-radius:24px;font-size:.9rem;cursor:pointer;font-weight:700}
+@keyframes easterIn{from{opacity:0}to{opacity:1}}
+@keyframes easterPop{from{opacity:0;transform:scale(.8) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}

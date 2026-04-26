@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================================
-#  {{APP_NAME}} iOS · management console · macOS ONLY
+#  Aqidat al-Muslim iOS · management console · macOS ONLY
 #  iOS builds require Xcode, which is macOS-only. This script is for Mac users
 #  who want to build, test on simulator/device, and publish to App Store.
 # ============================================================================
@@ -19,8 +19,8 @@ IOS_DIR="$PROJECT_DIR/ios"
 WWW_DIR="$PROJECT_DIR/www"
 XCWORKSPACE="$IOS_DIR/App/App.xcworkspace"
 XCPROJECT="$IOS_DIR/App/App.xcodeproj"
-SRC_BOOK_DIR="${SRC_BOOK_DIR:-$HOME/Desktop/02_choughl/koutoub/{{KOUTOUB_DIR}}}"
-APP_ID="${APP_ID:-org.workshopdiy.{{APPID_SEGMENT}}}"
+SRC_BOOK_DIR="${SRC_BOOK_DIR:-$HOME/Desktop/02_choughl/koutoub/18-aqidat-al-muslim}"
+APP_ID="${APP_ID:-org.workshopdiy.aqidatalmuslim}"
 SIM_DEVICE="${SIM_DEVICE:-iPhone 15}"
 SIM_OS="${SIM_OS:-17.0}"
 
@@ -264,7 +264,7 @@ cmd_simulator_start() {
 cmd_screenshot() {
   head1 "Screenshot iOS Simulator"
   if ! have xcrun; then err "xcrun missing."; pause; return; fi
-  local out="/tmp/ios-{{SLUG}}-$(date +%Y%m%d-%H%M%S).png"
+  local out="/tmp/ios-aqidat-al-muslim-$(date +%Y%m%d-%H%M%S).png"
   xcrun simctl io booted screenshot "$out" 2>&1 | tail -2
   if [ -s "$out" ]; then
     ok "Saved: $out"
@@ -301,7 +301,7 @@ show_menu() {
   clear
   cat <<EOF
 ${BOLD}${MAGENTA}╔════════════════════════════════════════════════════════════════╗
-║   {{APP_NAME}} iOS · management console (macOS only)             ║
+║   Aqidat al-Muslim iOS · management console (macOS only)             ║
 ║   ${DIM}companion to WORKSHOP.html${RESET}${BOLD}${MAGENTA}                                 ║
 ╚════════════════════════════════════════════════════════════════╝${RESET}
 

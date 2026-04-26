@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================================
-#  {{APP_NAME}} Android · management console · OS DISPATCHER
+#  Aqidat al-Muslim Android · management console · OS DISPATCHER
 #  Detects the host OS and execs the right platform script.
 #
 #  Usage:  ./manage.sh
@@ -68,7 +68,7 @@ esac
 
 # ---------- prompt for target platform on macOS if not set ----------
 if [ "$OS" = "macos" ] && [ -z "$PLATFORM" ] && [ -t 0 ]; then
-  printf "\n${BOLD}${MAGENTA}── {{APP_NAME}} · dispatcher ──${RESET}\n\n"
+  printf "\n${BOLD}${MAGENTA}── Aqidat al-Muslim · dispatcher ──${RESET}\n\n"
   printf "  ${BOLD}Detected:${RESET} 🍎 macOS\n\n"
   printf "  You can build for either platform on this Mac. Choose target:\n"
   printf "    ${CYAN}1)${RESET} 🤖 Android   ${DIM}(Play Store, \$25 one-time)${RESET}\n"
@@ -82,7 +82,7 @@ if [ "$OS" = "macos" ] && [ -z "$PLATFORM" ] && [ -t 0 ]; then
 fi
 
 # ---------- banner ----------
-printf "\n${BOLD}${MAGENTA}── {{APP_NAME}} · dispatcher ──${RESET}\n\n"
+printf "\n${BOLD}${MAGENTA}── Aqidat al-Muslim · dispatcher ──${RESET}\n\n"
 printf "  ${BOLD}Target:${RESET} $OS_LABEL  ${DIM}(uname=$(uname -s 2>/dev/null)${MSYSTEM:+, MSYSTEM=$MSYSTEM})${RESET}\n"
 
 if [ "$OS" = "unknown" ]; then

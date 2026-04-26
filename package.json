@@ -1,18 +1,18 @@
 {
-  "name": "{{SLUG}}",
+  "name": "aqidat-al-muslim",
   "version": "1.0.0",
-  "description": "{{TITLE_EN}} — Capacitor Android/iOS wrapper for Sheikh Mohammed al-Ghazali's book",
+  "description": "The Muslim's Creed — Capacitor Android/iOS wrapper for Sheikh Mohammed al-Ghazali's book",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["islamic", "al-ghazali", "trilingual", "arabic", "education", "{{SLUG}}"],
+  "keywords": ["islamic", "al-ghazali", "trilingual", "arabic", "education", "aqidat-al-muslim"],
   "author": "Abdelhak Bourdim <abdelhak.bourdim@gmail.com>",
   "license": "MIT",
   "homepage": "https://workshop-diy.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/abourdim/{{SLUG}}-android.git"
+    "url": "https://github.com/abourdim/aqidat-al-muslim-android.git"
   },
   "dependencies": {
     "@capacitor-community/text-to-speech": "^8.0.0",

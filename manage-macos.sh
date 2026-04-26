@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================================
-#  {{APP_NAME}} Android · management console
+#  Aqidat al-Muslim Android · management console
 #  Companion script for WORKSHOP.html — check, install, build, test, publish
 # ============================================================================
 set -u
@@ -9,11 +9,11 @@ set -u
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ANDROID_DIR="$PROJECT_DIR/android"
 WWW_DIR="$PROJECT_DIR/www"
-SRC_BOOK_DIR="${SRC_BOOK_DIR:-$HOME/Desktop/02_choughl/koutoub/{{KOUTOUB_DIR}}}"
+SRC_BOOK_DIR="${SRC_BOOK_DIR:-$HOME/Desktop/02_choughl/koutoub/18-aqidat-al-muslim}"
 KEYSTORE_DIR="${KEYSTORE_DIR:-$HOME/keys}"
 KEYSTORE_FILE="${KEYSTORE_FILE:-$KEYSTORE_DIR/wdiy-upload.keystore}"
-APP_ID="${APP_ID:-org.workshopdiy.{{APPID_SEGMENT}}}"
-AVD_NAME="${AVD_NAME:-{{AVD_NAME}}}"
+APP_ID="${APP_ID:-org.workshopdiy.aqidatalmuslim}"
+AVD_NAME="${AVD_NAME:-aqidat_al_muslim_test}"
 
 # ---------- discover toolchain ----------
 # Capacitor 8 needs JDK 21+. Try user-local first, then Android Studio's bundled JBR.
@@ -417,7 +417,7 @@ cmd_test() {
     pause; return
   fi
 
-  local out="/tmp/{{SLUG}}-$(date +%Y%m%d-%H%M%S).png"
+  local out="/tmp/aqidat-al-muslim-$(date +%Y%m%d-%H%M%S).png"
   adb exec-out screencap -p > "$out"
   if [ -s "$out" ]; then
     ok "Screenshot saved: $out ($(du -h "$out" | awk '{print $1}'))"
@@ -479,7 +479,7 @@ show_menu() {
   clear
   cat <<EOF
 ${BOLD}${MAGENTA}╔════════════════════════════════════════════════════════════════╗
-║   {{APP_NAME}} Android · management console                      ║
+║   Aqidat al-Muslim Android · management console                      ║
 ║   ${DIM}companion to WORKSHOP.html${RESET}${BOLD}${MAGENTA}                                 ║
 ╚════════════════════════════════════════════════════════════════╝${RESET}
 

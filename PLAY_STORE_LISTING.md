@@ -1,4 +1,4 @@
-# Play Store listing — {{APP_NAME}} ({{TITLE_AR}})
+# Play Store listing — Aqidat al-Muslim (عقيدة المسلم)
 
 Draft copy for Google Play Console "Main store listing" page. Play Console accepts separate translations per language — upload all three.
 
@@ -6,7 +6,7 @@ Draft copy for Google Play Console "Main store listing" page. Play Console accep
 
 ## Metadata (common to all languages)
 
-- **Package name**: `{{APP_ID}}`
+- **Package name**: `org.workshopdiy.aqidatalmuslim`
 - **Category**: `Books & Reference` (primary), `Education` (secondary if allowed)
 - **Tags**: Islamic studies, Arabic, trilingual, education, al-Ghazali
 - **Contact email**: `abdelhak.bourdim@gmail.com`
@@ -23,17 +23,46 @@ Draft copy for Google Play Console "Main store listing" page. Play Console accep
 
 ### App name (≤30 chars)
 ```
-{{TITLE_AR}}
+عقيدة المسلم
 ```
 
 ### Short description (≤80 chars)
 ```
-{{SHORT_DESC_AR}}
+كتاب "عقيدة المسلم" تطبيق تفاعلي — للشيخ محمد الغزالي
 ```
 
 ### Full description (≤4000 chars)
 ```
-{{FULL_DESC_AR}}
+🕌 عقيدة المسلم — تطبيق تفاعلي
+
+تطبيق تفاعلي ثلاثي اللغة (عربي/إنجليزي/فرنسي) مستوحى من كتاب "عقيدة المسلم" للشيخ محمد الغزالي رحمه الله (1917–1996).
+
+📚 عن الكتاب
+
+يعرض هذا التطبيق محتوى الكتاب بأسلوب بصري معاصر، منظما على فصوله ومواضيعه. يهدف إلى تقريب فكر الشيخ الغزالي للقارئ المعاصر، وإتاحته بثلاث لغات.
+
+✨ المزايا
+
+• محتوى الكتاب منظم على فصوله
+• ثلاث لغات: عربية، إنجليزية، فرنسية
+• ثلاث سمات لونية
+• وضع القراءة، قارئ صوتي، واجهة عربية بدعم كامل (RTL)
+• يعمل بدون اتصال بالإنترنت
+
+🕌 إخلاء مسؤولية
+
+لست عالما في الشريعة. هذا جهد متواضع من أب مسلم لنشر حكمة الشيخ الغزالي بأسلوب تفاعلي. المحتوى مستمد من الكتاب ومصادر إسلامية موثوقة. هذا ليس فتوى.
+
+📖 المصادر
+
+• كتاب "عقيدة المسلم" — الشيخ محمد الغزالي
+• القرآن الكريم والسنة النبوية الصحيحة
+
+رحم الله الشيخ محمد الغزالي وجزاه عنا خير الجزاء 🤲
+
+—
+Powered by workshop-diy.org
+
 ```
 
 ---
@@ -42,17 +71,46 @@ Draft copy for Google Play Console "Main store listing" page. Play Console accep
 
 ### App name
 ```
-{{APP_NAME}} — {{TITLE_EN}}
+Aqidat al-Muslim — The Muslim's Creed
 ```
 
 ### Short description
 ```
-{{SHORT_DESC_EN}}
+"The Muslim's Creed" — interactive trilingual app by Sheikh al-Ghazali
 ```
 
 ### Full description
 ```
-{{FULL_DESC_EN}}
+🕌 Aqidat al-Muslim — The Muslim's Creed
+
+Interactive trilingual app (Arabic / English / French) based on the book "The Muslim's Creed" by Sheikh Mohammed al-Ghazali (1917–1996).
+
+📚 About the book
+
+This app presents the book's content with modern visual design, organized chapter by chapter. It aims to bring Sheikh al-Ghazali's thought to today's reader, accessible in three languages.
+
+✨ Features
+
+• Content organized by the book's chapters
+• Three languages: Arabic, English, French
+• Three color themes
+• Reading mode, audio narrator, full RTL Arabic support
+• Works offline — no internet required
+
+🕌 Disclaimer
+
+I am not a scholar. This is a humble effort by a Muslim parent to share Sheikh al-Ghazali's wisdom interactively. Content is derived from the book and trusted Islamic sources. This is not a fatwa.
+
+📖 Sources
+
+• "The Muslim's Creed" — Sheikh Mohammed al-Ghazali
+• The Holy Quran and authentic Sunnah
+
+May Allah have mercy on Sheikh al-Ghazali and reward him 🤲
+
+—
+Powered by workshop-diy.org
+
 ```
 
 ---
@@ -61,17 +119,46 @@ Draft copy for Google Play Console "Main store listing" page. Play Console accep
 
 ### App name
 ```
-{{APP_NAME}} — {{TITLE_FR}}
+Aqidat al-Muslim — Aqidat al-Muslim
 ```
 
 ### Short description
 ```
-{{SHORT_DESC_FR}}
+« The Muslim's Creed » — application trilingue par Cheikh al-Ghazali
 ```
 
 ### Full description
 ```
-{{FULL_DESC_FR}}
+🕌 Aqidat al-Muslim — The Muslim's Creed
+
+Application interactive trilingue (arabe / anglais / français) inspirée du livre « The Muslim's Creed » du Cheikh Mohammed al-Ghazali (1917–1996).
+
+📚 À propos du livre
+
+Cette application présente le contenu du livre avec un design visuel moderne, organisé chapitre par chapitre. Elle vise à rendre la pensée du Cheikh al-Ghazali accessible au lecteur d'aujourd'hui, en trois langues.
+
+✨ Fonctionnalités
+
+• Contenu organisé selon les chapitres du livre
+• Trois langues : arabe, anglais, français
+• Trois thèmes visuels
+• Mode lecture, narrateur audio, prise en charge complète de l'arabe (RTL)
+• Fonctionne hors ligne — aucune connexion requise
+
+🕌 Avertissement
+
+Je ne suis pas un savant. Il s'agit d'un modeste effort d'un parent musulman pour partager la sagesse du Cheikh al-Ghazali de manière interactive. Le contenu est tiré du livre et de sources islamiques fiables. Ceci n'est pas une fatwa.
+
+📖 Sources
+
+• « The Muslim's Creed » — Cheikh Mohammed al-Ghazali
+• Le Saint Coran et la Sunna authentique
+
+Qu'Allah fasse miséricorde au Cheikh al-Ghazali et le récompense 🤲
+
+—
+Propulsé par workshop-diy.org
+
 ```
 
 ---
@@ -99,10 +186,10 @@ Screenshots to capture (book-specific — adjust list to actual app screens):
 Copy to a public page (GitHub Pages works). Change email + date.
 
 ```
-Privacy Policy — {{APP_NAME}}
-Last updated: {{DATE}}
+Privacy Policy — Aqidat al-Muslim
+Last updated: 2026-04-26
 
-The {{APP_NAME}} app does not collect, store, transmit, or share any personal
+The Aqidat al-Muslim app does not collect, store, transmit, or share any personal
 data. All content is bundled with the app and runs entirely on your device.
 The app does not use analytics, advertising networks, crash reporters, or
 third-party SDKs.

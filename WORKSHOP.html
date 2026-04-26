@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>{{APP_NAME}} → Android · Workshop Report</title>
+<title>Aqidat al-Muslim → Android · Workshop Report</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -357,7 +357,7 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="kicker">workshop-diy · field report</div>
-    <h1 class="hero-title">{{APP_NAME}} → Android</h1>
+    <h1 class="hero-title">Aqidat al-Muslim → Android</h1>
     <p class="hero-sub">
       How a static Arabic/English/French web app turned into a real Android
       application — signed, installable, and store-ready — in one working session.
@@ -400,7 +400,7 @@
 <div class="toc">
   <h3>Contents</h3>
   <ol>
-    <li><a href="#try-it" style="color:var(--amber)"><strong>Try it now — install {{APP_NAME}}</strong></a></li>
+    <li><a href="#try-it" style="color:var(--amber)"><strong>Try it now — install Aqidat al-Muslim</strong></a></li>
     <li><a href="#overview">Overview &amp; what was built</a></li>
     <li><a href="#architecture">Architecture diagram</a></li>
     <li><a href="#phases">Phases of the work</a></li>
@@ -421,10 +421,10 @@
 
 <!-- ======================================================== TRY IT NOW -->
 <section id="try-it">
-  <h2><span class="num" style="color:var(--ok)">▶</span>Try it now — install {{APP_NAME}}</h2>
+  <h2><span class="num" style="color:var(--ok)">▶</span>Try it now — install Aqidat al-Muslim</h2>
   <p class="lede">
     Want to see the app on your phone before reading anything else? Grab the installable
-    build from the <a href="https://github.com/abourdim/{{SLUG}}-android/tree/main/releases">releases/</a> folder.
+    build from the <a href="https://github.com/abourdim/aqidat-al-muslim-android/tree/main/releases">releases/</a> folder.
   </p>
 
   <div class="grid grid-2">
@@ -432,10 +432,10 @@
     <!-- ANDROID -->
     <div class="card" style="border-color:rgba(74,222,128,.4); background:linear-gradient(135deg, rgba(74,222,128,.05), var(--bg-card));">
       <h4>🤖 Android — ready to install</h4>
-      <p class="meta">{{SLUG}}-v1.1-debug.apk · 4.1 MB · Android 6.0+</p>
+      <p class="meta">aqidat-al-muslim-v1.1-debug.apk · 4.1 MB · Android 6.0+</p>
 
       <!-- Direct download button -->
-      <a href="https://github.com/abourdim/{{SLUG}}-android/releases/download/v1.1-debug/{{SLUG}}-v1.1-debug.apk"
+      <a href="https://github.com/abourdim/aqidat-al-muslim-android/releases/download/v1.1-debug/aqidat-al-muslim-v1.1-debug.apk"
          download
          style="display:flex; align-items:center; justify-content:center; gap:10px;
                 background:linear-gradient(135deg,#2E7D52,#4FAE7A); color:#fff;
@@ -473,8 +473,8 @@
       <details style="margin-top:16px;">
         <summary style="cursor:pointer; color:var(--text-dim); font-size:.85rem;">Alt method — install via <code>adb</code> from a computer</summary>
         <pre class="code" style="font-size:.78em; margin-top:8px;"><span class="cmt"># Phone plugged in via USB, USB debugging enabled:</span>
-<span class="fn">curl</span> -LO https://github.com/abourdim/{{SLUG}}-android/releases/download/v1.1-debug/{{SLUG}}-v1.1-debug.apk
-<span class="fn">adb</span> install {{SLUG}}-v1.1-debug.apk</pre>
+<span class="fn">curl</span> -LO https://github.com/abourdim/aqidat-al-muslim-android/releases/download/v1.1-debug/aqidat-al-muslim-v1.1-debug.apk
+<span class="fn">adb</span> install aqidat-al-muslim-v1.1-debug.apk</pre>
       </details>
     </div>
 
@@ -500,7 +500,7 @@
 <section id="overview">
   <h2><span class="num">01</span>Overview &amp; what was built</h2>
   <p class="lede">
-    Starting point: <code>{{SLUG}}</code> — a static <a href="https://developer.mozilla.org/docs/Web/HTML">HTML</a> +
+    Starting point: <code>aqidat-al-muslim</code> — a static <a href="https://developer.mozilla.org/docs/Web/HTML">HTML</a> +
     <a href="https://developer.mozilla.org/docs/Web/CSS">CSS</a> +
     <a href="https://developer.mozilla.org/docs/Web/JavaScript">JavaScript</a> educational app with 3 languages, themes,
     quiz, and narrator. No frameworks, no dependencies.
@@ -514,11 +514,11 @@
   <div class="grid grid-2" style="margin-top:20px">
     <div class="card">
       <h4>🕵️ Phase A — Audit</h4>
-      <p>Scanned all 54 sibling books for broken clickable elements. Found two unwired buttons (books 04 and 05 — reading-mode toggle). Verified 01-{{SLUG}} has no broken onclick handlers.</p>
+      <p>Scanned all 54 sibling books for broken clickable elements. Found two unwired buttons (books 04 and 05 — reading-mode toggle). Verified 01-aqidat-al-muslim has no broken onclick handlers.</p>
     </div>
     <div class="card">
       <h4>📱 Phase B — Mobile polish</h4>
-      <p>Viewed {{SLUG}} at 360×740. Header buttons were overlapping; fixed with a <code>@media (max-width:480px)</code> block. Replaced the header "W" text with the real workshop-diy logo image.</p>
+      <p>Viewed aqidat-al-muslim at 360×740. Header buttons were overlapping; fixed with a <code>@media (max-width:480px)</code> block. Replaced the header "W" text with the real workshop-diy logo image.</p>
     </div>
     <div class="card">
       <h4>📦 Phase C — Capacitor wrapping</h4>
@@ -633,7 +633,7 @@
       <ul>
         <li><span class="chip ok">fixed</span> <code>05-iyadat-al-ummah/app.js</code> — added missing <code>toggleReadingMode()</code></li>
         <li><span class="chip ok">fixed</span> <code>04-ayqidh-taqatak/app.js</code> — wired unattached <code>#readingModeBtn</code> via <code>addEventListener</code></li>
-        <li><span class="chip">verified</span> Book 01 ({{SLUG}}) is clean: <code>cycleTheme</code>, <code>toggleHelp</code>, narrator APIs all live-tested in browser</li>
+        <li><span class="chip">verified</span> Book 01 (aqidat-al-muslim) is clean: <code>cycleTheme</code>, <code>toggleHelp</code>, narrator APIs all live-tested in browser</li>
       </ul>
       <div class="kids">
         <p>Think of <strong>onclick</strong> as a doorbell. We checked every doorbell in 54 houses: did pressing it actually ring a bell somewhere? Two doorbells were <em>disconnected</em> — we wired them up.</p>
@@ -643,7 +643,7 @@
     <div class="phase">
       <div class="when">Phase 2 · Mobile layout fix</div>
       <h3>Header overlap at 360px</h3>
-      <p>Opened <code>01-{{SLUG}}</code> at a phone-sized viewport (360×740). The header's <code>.header-controls</code> was <code>position:absolute</code>, which caused the language flags to overlap the title on narrow screens. Added a <code>@media (max-width:480px)</code> block that switches it to <code>position:static</code>, wraps the inner container, and shrinks buttons from 38px → 32px.</p>
+      <p>Opened <code>01-aqidat-al-muslim</code> at a phone-sized viewport (360×740). The header's <code>.header-controls</code> was <code>position:absolute</code>, which caused the language flags to overlap the title on narrow screens. Added a <code>@media (max-width:480px)</code> block that switches it to <code>position:static</code>, wraps the inner container, and shrinks buttons from 38px → 32px.</p>
       <p>Also replaced the text-only "W" logo with the actual wdiy PNG icon downloaded from <a href="https://github.com/abourdim/workshop-logos">abourdim/workshop-logos</a>.</p>
     </div>
 
@@ -651,16 +651,16 @@
       <div class="when">Phase 3 · Capacitor scaffolding</div>
       <h3>Web app → native wrapper</h3>
       <pre class="code"><span class="cmt"># One-time scaffold — took ~2 min total</span>
-<span class="kw">mkdir -p</span> ~/Desktop/02_choughl/koutoub-android/{{SLUG}}
-<span class="kw">cd</span> ~/Desktop/02_choughl/koutoub-android/{{SLUG}}
+<span class="kw">mkdir -p</span> ~/Desktop/02_choughl/koutoub-android/aqidat-al-muslim
+<span class="kw">cd</span> ~/Desktop/02_choughl/koutoub-android/aqidat-al-muslim
 <span class="fn">npm</span> init -y
 <span class="fn">npm</span> install @capacitor/core @capacitor/android
 <span class="fn">npm</span> install -D @capacitor/cli
-<span class="fn">npx</span> cap init <span class="str">"{{APP_NAME}}"</span> <span class="str">"org.workshopdiy.{{APPID_SEGMENT}}"</span> --web-dir=www
-<span class="kw">mkdir</span> www && <span class="kw">cp</span> -R ~/Desktop/02_choughl/koutoub/01-{{SLUG}}/* www/
+<span class="fn">npx</span> cap init <span class="str">"Aqidat al-Muslim"</span> <span class="str">"org.workshopdiy.aqidatalmuslim"</span> --web-dir=www
+<span class="kw">mkdir</span> www && <span class="kw">cp</span> -R ~/Desktop/02_choughl/koutoub/01-aqidat-al-muslim/* www/
 <span class="fn">npx</span> cap add android</pre>
       <p>Icons for all five Android densities (mdpi → xxxhdpi) were fetched from the <code>workshop-logos</code> repo's <code>app_icons/android/</code> folder and placed into the gradle <code>res/mipmap-*</code> dirs. Adaptive icon XML was patched from <code>@color/…</code> to <code>@mipmap/…</code> because we're using PNG backgrounds not colors.</p>
-      <p><code>values-ar/strings.xml</code> added so the app name shows as <span class="ar">{{TITLE_AR}}</span> when the device locale is Arabic, and <code>{{APP_NAME}}</code> elsewhere.</p>
+      <p><code>values-ar/strings.xml</code> added so the app name shows as <span class="ar">عقيدة المسلم</span> when the device locale is Arabic, and <code>Aqidat al-Muslim</code> elsewhere.</p>
     </div>
 
     <div class="phase">
@@ -676,8 +676,8 @@ sdkmanager <span class="str">"platform-tools"</span> <span class="str">"platform
 sdkmanager <span class="str">"emulator"</span> <span class="str">"system-images;android-34;google_apis;x86_64"</span>
 
 <span class="cmt"># Create &amp; launch the emulator</span>
-avdmanager create avd -n {{AVD_NAME}} -k <span class="str">"system-images;android-34;google_apis;x86_64"</span> -d pixel_7
-emulator -avd {{AVD_NAME}}</pre>
+avdmanager create avd -n aqidat_al_muslim_test -k <span class="str">"system-images;android-34;google_apis;x86_64"</span> -d pixel_7
+emulator -avd aqidat_al_muslim_test</pre>
     </div>
 
     <div class="phase">
@@ -691,7 +691,7 @@ emulator -avd {{AVD_NAME}}</pre>
 <span class="cmt"># BUILD SUCCESSFUL in 4m 8s</span>
 
 <span class="fn">adb</span> install app/build/outputs/apk/debug/app-debug.apk
-<span class="fn">adb</span> shell am start -n org.workshopdiy.{{APPID_SEGMENT}}/.MainActivity</pre>
+<span class="fn">adb</span> shell am start -n org.workshopdiy.aqidatalmuslim/.MainActivity</pre>
       <p>First launch on emulator showed the splash (red theme, bismillah, ayah from Surat al-Hadid 57:27), then the home tab with book + author cards, then working tab navigation (home / quiz / sieve / truth).</p>
     </div>
 
@@ -827,7 +827,7 @@ emulator -avd {{AVD_NAME}}</pre>
 <!-- ======================================================== COMMANDS -->
 <section id="commands">
   <h2><span class="num">05</span>Key commands reference</h2>
-  <p class="lede">Copy-pasteable recipes. Assume working directory is the <code>{{SLUG}}/</code> project folder.</p>
+  <p class="lede">Copy-pasteable recipes. Assume working directory is the <code>aqidat-al-muslim/</code> project folder.</p>
 
   <div class="blocker" style="background:rgba(125,178,255,.07); border-left-color:var(--info);">
     <strong style="color:var(--info)">💡 The easy way:</strong>
@@ -838,7 +838,7 @@ emulator -avd {{AVD_NAME}}</pre>
 
   <h3>Update the web app inside the Android wrapper</h3>
   <pre class="code"><span class="cmt"># After editing anything in the source book folder (same on every OS)</span>
-<span class="kw">cp</span> -R /path/to/01-{{SLUG}}/* www/
+<span class="kw">cp</span> -R /path/to/01-aqidat-al-muslim/* www/
 <span class="fn">npx</span> cap sync android
 <span class="cmt"># → copies web assets into android/app/src/main/assets/public/</span></pre>
 
@@ -908,12 +908,12 @@ emulator -avd {{AVD_NAME}}</pre>
   <strong>BACK UP the .keystore file IMMEDIATELY</strong> — losing it means you can never update the app on Play Store.</p>
 
   <h3>Start emulator + install APK (same on every OS)</h3>
-  <pre class="code"><span class="fn">emulator</span> -avd {{AVD_NAME}} -no-snapshot -no-audio &amp;
+  <pre class="code"><span class="fn">emulator</span> -avd aqidat_al_muslim_test -no-snapshot -no-audio &amp;
 <span class="cmt"># Wait until boot_completed=1</span>
 <span class="kw">while</span> [ <span class="str">"$(adb shell getprop sys.boot_completed | tr -d '\r')"</span> != <span class="str">"1"</span> ]; <span class="kw">do</span> sleep 5; <span class="kw">done</span>
 
 <span class="fn">adb</span> install android/app/build/outputs/apk/debug/app-debug.apk
-<span class="fn">adb</span> shell am start -n org.workshopdiy.{{APPID_SEGMENT}}/.MainActivity</pre>
+<span class="fn">adb</span> shell am start -n org.workshopdiy.aqidatalmuslim/.MainActivity</pre>
 
   <h3>Install on a real phone via USB</h3>
   <pre class="code"><span class="cmt"># On phone: Settings → About → tap Build number 7× → Dev Options → enable USB debugging</span>
@@ -945,9 +945,9 @@ emulator -avd {{AVD_NAME}}</pre>
 <!-- ======================================================== FILE MAP -->
 <section id="file-map">
   <h2><span class="num">07</span>File map of the project</h2>
-  <p class="lede">Everything lives at <code>~/Desktop/02_choughl/koutoub-android/{{SLUG}}/</code>.</p>
+  <p class="lede">Everything lives at <code>~/Desktop/02_choughl/koutoub-android/aqidat-al-muslim/</code>.</p>
 
-  <pre class="code">{{SLUG}}/
+  <pre class="code">aqidat-al-muslim/
 ├── <span class="fn">capacitor.config.json</span>       <span class="cmt"># appId, appName, splash, status bar</span>
 ├── <span class="fn">package.json</span>                 <span class="cmt"># Capacitor deps</span>
 ├── <span class="fn">PLAY_STORE_LISTING.md</span>        <span class="cmt"># AR/EN/FR store copy</span>
@@ -1058,7 +1058,7 @@ emulator -avd {{AVD_NAME}}</pre>
 │       │   └── drawable/splash.png             <span class="cmt"># splash screen image</span>
 │       └── <span class="kw">assets/public/</span>    <span class="cmt"># ← OUR WEB APP lives here, synced from www/</span>
 │           ├── index.html                      <span class="cmt"># This is what the WebView opens on launch</span>
-│           ├── app.js · style.css · ...        <span class="cmt"># exactly the files you wrote in {{SLUG}}</span>
+│           ├── app.js · style.css · ...        <span class="cmt"># exactly the files you wrote in aqidat-al-muslim</span>
 │           └── assets/wdiy-icon.png
 │
 ├── <span class="kw">capacitor-android/</span>       <span class="cmt"># Capacitor's runtime — the WebView bridge code</span>
@@ -1116,10 +1116,10 @@ emulator -avd {{AVD_NAME}}</pre>
    <span class="fn">4822</span>    META-INF/CERT.RSA          <span class="cmt"># your signing certificate + signature blob</span>
    <span class="fn">2841</span>    res/mipmap-xxxhdpi/ic_launcher.png
   ...
- <span class="fn">245172</span>    assets/public/index.html   <span class="cmt"># ← our {{SLUG}}!</span>
+ <span class="fn">245172</span>    assets/public/index.html   <span class="cmt"># ← our aqidat-al-muslim!</span>
   <span class="fn">89314</span>    assets/public/app.js       <span class="cmt"># ← untouched; readable with any text editor</span>
   <span class="fn">45210</span>    assets/public/style.css</pre>
-  <p>Notice <code>assets/public/*</code> are your original web files — <strong>not compiled, not obfuscated</strong>. Someone can unzip the APK and read your JavaScript. For a private/commercial app you'd want to minify/obfuscate before building, but for an open educational app like {{SLUG}} it's fine and desirable.</p>
+  <p>Notice <code>assets/public/*</code> are your original web files — <strong>not compiled, not obfuscated</strong>. Someone can unzip the APK and read your JavaScript. For a private/commercial app you'd want to minify/obfuscate before building, but for an open educational app like aqidat-al-muslim it's fine and desirable.</p>
 
   <hr class="soft">
 
@@ -1171,7 +1171,7 @@ emulator -avd {{AVD_NAME}}</pre>
       <ul>
         <li>verifies the APK signature</li>
         <li>checks permissions requested in the manifest</li>
-        <li>extracts <code>classes.dex</code> to <code>/data/app/org.workshopdiy.{{APPID_SEGMENT}}/</code></li>
+        <li>extracts <code>classes.dex</code> to <code>/data/app/org.workshopdiy.aqidatalmuslim/</code></li>
         <li>optimises the DEX with the phone's ART runtime (creates <code>.oat</code> / <code>.vdex</code> files)</li>
         <li>copies icons to the right system caches</li>
         <li>registers the app with the launcher → icon appears</li>
@@ -1301,7 +1301,7 @@ emulator -avd {{AVD_NAME}}</pre>
   <h3 style="color:#fff">5 · Peek inside a real IPA</h3>
   <p>An IPA is a ZIP. Try this after you archive &amp; export:</p>
   <pre class="code"><span class="cmt"># Rename, extract</span>
-<span class="kw">cp</span> ~/Desktop/{{SLUG}}.ipa /tmp/ipa.zip
+<span class="kw">cp</span> ~/Desktop/aqidat-al-muslim.ipa /tmp/ipa.zip
 <span class="kw">cd</span> /tmp && <span class="fn">unzip</span> ipa.zip</pre>
   <p>You'll get:</p>
   <pre class="code">Payload/
@@ -1350,7 +1350,7 @@ emulator -avd {{AVD_NAME}}</pre>
     </div>
     <div class="card">
       <h4>2. App ID</h4>
-      <p>A bundle identifier (e.g. <code>org.workshopdiy.{{APPID_SEGMENT}}</code>) registered in your Apple Developer account. Must exactly match the <code>CFBundleIdentifier</code> in <code>Info.plist</code>.</p>
+      <p>A bundle identifier (e.g. <code>org.workshopdiy.aqidatalmuslim</code>) registered in your Apple Developer account. Must exactly match the <code>CFBundleIdentifier</code> in <code>Info.plist</code>.</p>
     </div>
     <div class="card">
       <h4>3. Provisioning profile</h4>
@@ -1359,7 +1359,7 @@ emulator -avd {{AVD_NAME}}</pre>
     </div>
     <div class="card">
       <h4>4. Entitlements</h4>
-      <p>A file listing which capabilities the app uses (Push, HealthKit, iCloud, etc.). Must match what the provisioning profile allows. For our simple {{APP_NAME}}: no special entitlements.</p>
+      <p>A file listing which capabilities the app uses (Push, HealthKit, iCloud, etc.). Must match what the provisioning profile allows. For our simple Aqidat al-Muslim: no special entitlements.</p>
     </div>
   </div>
   <p style="margin-top:16px"><strong>In Xcode → target → Signing &amp; Capabilities tab</strong>, tick <em>"Automatically manage signing"</em> and pick your Team. Xcode requests the cert from Apple, creates the app ID, generates the profile, and embeds everything. The only time you touch this manually is for enterprise / multi-team / CI scenarios.</p>
@@ -1597,7 +1597,7 @@ emulator -avd {{AVD_NAME}}</pre>
 <span class="cmt"># Initialize Capacitor — pick your own app name and reverse-domain id</span>
 <span class="fn">npx</span> cap init <span class="str">"My App"</span> <span class="str">"com.example.myapp"</span> --web-dir=www</pre>
       <div class="kids">
-        <p>The second argument <code>com.example.myapp</code> is like a phone number for your app — it must be unique in the whole Play Store. Use your own domain backwards (e.g. <code>org.workshopdiy.{{APPID_SEGMENT}}</code>).</p>
+        <p>The second argument <code>com.example.myapp</code> is like a phone number for your app — it must be unique in the whole Play Store. Use your own domain backwards (e.g. <code>org.workshopdiy.aqidatalmuslim</code>).</p>
       </div>
     </div>
 
@@ -1806,7 +1806,7 @@ keyPassword=YOUR_PASSWORD_HERE</pre>
   <p>All three platform scripts share the same 14-option menu and the same env vars. A teacher can say "option 5" and it means the same thing whether the student is on macOS, Linux, or Windows.</p>
 
   <h3 style="color:#fff;margin-top:30px">Files shipped</h3>
-  <pre class="code">{{SLUG}}/
+  <pre class="code">aqidat-al-muslim/
 ├── <span class="fn">manage.sh</span>              <span class="cmt"># ← entry point (dispatcher). Run this.</span>
 ├── manage-macos.sh       <span class="cmt"># Brew-based installs, /Applications paths</span>
 ├── manage-linux.sh       <span class="cmt"># apt/dnf/pacman, /opt paths, KVM checks</span>
@@ -1915,7 +1915,7 @@ keyPassword=YOUR_PASSWORD_HERE</pre>
     <div class="phase">
       <div class="when">Option 8 · device</div>
       <h3>Create emulator (AVD)</h3>
-      <p>Creates a named virtual device. Default: <code>$AVD_NAME={{AVD_NAME}}</code>, Pixel 7, API 34, x86_64.</p>
+      <p>Creates a named virtual device. Default: <code>$AVD_NAME=aqidat_al_muslim_test</code>, Pixel 7, API 34, x86_64.</p>
       <p>Idempotent: if an AVD with that name exists, skips creation.</p>
       <p><strong>Customise</strong> by setting <code>AVD_NAME</code> env var before running.</p>
     </div>
@@ -1946,7 +1946,7 @@ keyPassword=YOUR_PASSWORD_HERE</pre>
     <div class="phase">
       <div class="when">Option 11 · device</div>
       <h3>Take screenshot</h3>
-      <p>Captures the current screen of the connected device via <code>adb exec-out screencap -p</code>. Saves to <code>/tmp/{{SLUG}}-YYYYMMDD-HHMMSS.png</code>. Offers to open it.</p>
+      <p>Captures the current screen of the connected device via <code>adb exec-out screencap -p</code>. Saves to <code>/tmp/aqidat-al-muslim-YYYYMMDD-HHMMSS.png</code>. Offers to open it.</p>
       <p><strong>Good for:</strong> Play Store screenshot collection, bug reports, progress photos.</p>
     </div>
 
@@ -1982,9 +1982,9 @@ keyPassword=YOUR_PASSWORD_HERE</pre>
       <tr><th>Variable</th><th>Default</th><th>What it controls</th></tr>
     </thead>
     <tbody>
-      <tr><td><code>SRC_BOOK_DIR</code></td><td><code>~/Desktop/02_choughl/koutoub/01-{{SLUG}}</code></td><td>Source book folder that option 4 copies into <code>www/</code></td></tr>
-      <tr><td><code>APP_ID</code></td><td><code>org.workshopdiy.{{APPID_SEGMENT}}</code></td><td>Package name used by <code>adb shell am start</code></td></tr>
-      <tr><td><code>AVD_NAME</code></td><td><code>{{AVD_NAME}}</code></td><td>Virtual device name created by option 8, booted by option 9</td></tr>
+      <tr><td><code>SRC_BOOK_DIR</code></td><td><code>~/Desktop/02_choughl/koutoub/01-aqidat-al-muslim</code></td><td>Source book folder that option 4 copies into <code>www/</code></td></tr>
+      <tr><td><code>APP_ID</code></td><td><code>org.workshopdiy.aqidatalmuslim</code></td><td>Package name used by <code>adb shell am start</code></td></tr>
+      <tr><td><code>AVD_NAME</code></td><td><code>aqidat_al_muslim_test</code></td><td>Virtual device name created by option 8, booted by option 9</td></tr>
       <tr><td><code>KEYSTORE_FILE</code></td><td><code>~/keys/wdiy-upload.keystore</code></td><td>Where the upload keystore lives</td></tr>
       <tr><td><code>KEYSTORE_DIR</code></td><td><code>~/keys</code></td><td>Directory created by option 7 if missing</td></tr>
       <tr><td><code>JAVA_HOME</code></td><td>Android Studio's embedded JBR</td><td>Which Java runtime Gradle uses</td></tr>
@@ -2117,7 +2117,7 @@ AVD_NAME=iyadat_test \
       <p>In Play Console → <strong>All apps → Create app</strong>. Fill:</p>
       <table class="neat">
         <tbody>
-          <tr><td><strong>App name</strong></td><td><code>{{APP_NAME}}</code> (keep it short — 30 chars max; you can add translated names per locale later)</td></tr>
+          <tr><td><strong>App name</strong></td><td><code>Aqidat al-Muslim</code> (keep it short — 30 chars max; you can add translated names per locale later)</td></tr>
           <tr><td><strong>Default language</strong></td><td><code>Arabic (ar)</code> — the primary target audience</td></tr>
           <tr><td><strong>App or game</strong></td><td>App</td></tr>
           <tr><td><strong>Free or paid</strong></td><td>Free</td></tr>
@@ -2135,13 +2135,13 @@ AVD_NAME=iyadat_test \
 
       <ol>
         <li><strong>Privacy policy URL</strong> — a public HTTPS page. You have <code>store-assets/privacy.html</code>; host it. Easiest: push it to a GitHub repo and enable Pages:
-<pre class="code"><span class="cmt"># Create repo on github.com (e.g. abourdim/{{SLUG}}-privacy)</span>
+<pre class="code"><span class="cmt"># Create repo on github.com (e.g. abourdim/aqidat-al-muslim-privacy)</span>
 <span class="kw">cd</span> store-assets
 <span class="fn">git</span> init && <span class="fn">git</span> add privacy.html && <span class="fn">git</span> commit -m <span class="str">"privacy"</span>
-<span class="fn">git</span> remote add origin https://github.com/abourdim/{{SLUG}}-privacy.git
+<span class="fn">git</span> remote add origin https://github.com/abourdim/aqidat-al-muslim-privacy.git
 <span class="fn">git</span> branch -M main && <span class="fn">git</span> push -u origin main
 <span class="cmt"># On github.com: repo → Settings → Pages → Source: main branch → Save</span>
-<span class="cmt"># URL: https://abourdim.github.io/{{SLUG}}-privacy/privacy.html</span></pre>
+<span class="cmt"># URL: https://abourdim.github.io/aqidat-al-muslim-privacy/privacy.html</span></pre>
           Paste that URL into Play Console.
         </li>
 
@@ -2149,9 +2149,9 @@ AVD_NAME=iyadat_test \
 
         <li><strong>Ads</strong> — "No, my app does not contain ads".</li>
 
-        <li><strong>Content rating</strong> — fill the IARC questionnaire. For {{APP_NAME}} (text content, religious subject, no violence/gambling): answer <em>No</em> to almost everything. You'll get an "Everyone" rating. Save &amp; apply.</li>
+        <li><strong>Content rating</strong> — fill the IARC questionnaire. For Aqidat al-Muslim (text content, religious subject, no violence/gambling): answer <em>No</em> to almost everything. You'll get an "Everyone" rating. Save &amp; apply.</li>
 
-        <li><strong>Target audience</strong> — pick age brackets. {{APP_NAME}} is adults + teens. Select <strong>13+</strong> (ticking under-13 triggers stricter Google Play Families rules).</li>
+        <li><strong>Target audience</strong> — pick age brackets. Aqidat al-Muslim is adults + teens. Select <strong>13+</strong> (ticking under-13 triggers stricter Google Play Families rules).</li>
 
         <li><strong>News apps</strong> — "No".</li>
 
@@ -2183,7 +2183,7 @@ AVD_NAME=iyadat_test \
       <table class="neat">
         <thead><tr><th>Field</th><th>Constraint</th><th>Source</th></tr></thead>
         <tbody>
-          <tr><td>App name</td><td>≤30 chars</td><td><code>{{TITLE_AR}}</code> (Arabic default)</td></tr>
+          <tr><td>App name</td><td>≤30 chars</td><td><code>عقيدة المسلم</code> (Arabic default)</td></tr>
           <tr><td>Short description</td><td>≤80 chars</td><td>From <code>PLAY_STORE_LISTING.md</code> §Arabic</td></tr>
           <tr><td>Full description</td><td>≤4000 chars</td><td>From <code>PLAY_STORE_LISTING.md</code> §Arabic</td></tr>
           <tr><td>App icon</td><td>512×512 PNG, ≤1 MB</td><td><code>store-assets/play-store-icon-512.png</code></td></tr>
@@ -2258,7 +2258,7 @@ AVD_NAME=iyadat_test \
         <li>Status changes to <strong>In review</strong>. Email arrives when approved (usually 2–3 days, sometimes same-day, occasionally 7+ for new accounts).</li>
       </ol>
       <p>Once approved, your app is live at:</p>
-      <pre class="code">https://play.google.com/store/apps/details?id=org.workshopdiy.{{APPID_SEGMENT}}</pre>
+      <pre class="code">https://play.google.com/store/apps/details?id=org.workshopdiy.aqidatalmuslim</pre>
     </div>
 
     <!-- =========================================================== -->
@@ -2350,7 +2350,7 @@ versionName "1.1"</pre>
   <hr class="soft">
 
   <h3 style="color:#fff">What Capacitor gives us for iOS</h3>
-  <pre class="code"><span class="cmt"># One-time on Mac (inside the {{SLUG}} project folder)</span>
+  <pre class="code"><span class="cmt"># One-time on Mac (inside the aqidat-al-muslim project folder)</span>
 <span class="fn">npm</span> install @capacitor/ios
 <span class="fn">npx</span> cap add ios
 <span class="cmt"># Creates ios/App/App.xcodeproj — a real native Xcode project</span></pre>
@@ -2394,8 +2394,8 @@ versionName "1.1"</pre>
     <div class="phase">
       <div class="when">iOS Step 3 · ~1 min</div>
       <h3>Sync web app</h3>
-      <pre class="code"><span class="kw">cd</span> ~/Desktop/02_choughl/koutoub-android/{{SLUG}}
-<span class="fn">cp</span> -R ~/Desktop/02_choughl/koutoub/01-{{SLUG}}/* www/
+      <pre class="code"><span class="kw">cd</span> ~/Desktop/02_choughl/koutoub-android/aqidat-al-muslim
+<span class="fn">cp</span> -R ~/Desktop/02_choughl/koutoub/01-aqidat-al-muslim/* www/
 <span class="fn">npx</span> cap sync ios
 <span class="cmt"># Or just use: ./manage.sh → choose iOS → option 5</span></pre>
     </div>
@@ -2408,7 +2408,7 @@ versionName "1.1"</pre>
         <li>Top-left device selector → pick a simulator (e.g. iPhone 15).</li>
         <li>Click the ▶ Play button (⌘R). First build is ~3 min; Simulator launches with your app.</li>
       </ol>
-      <p>Expected: splash screen, then {{SLUG}} home, Arabic RTL rendered, all tabs work. Same app as Android.</p>
+      <p>Expected: splash screen, then aqidat-al-muslim home, Arabic RTL rendered, all tabs work. Same app as Android.</p>
     </div>
 
     <div class="phase">
@@ -2459,10 +2459,10 @@ versionName "1.1"</pre>
         <li>Fill:
           <ul>
             <li>Platform: iOS</li>
-            <li>Name: <code>{{APP_NAME}}</code></li>
+            <li>Name: <code>Aqidat al-Muslim</code></li>
             <li>Primary language: Arabic</li>
-            <li>Bundle ID: <code>org.workshopdiy.{{APPID_SEGMENT}}</code> (must match what's in Xcode)</li>
-            <li>SKU: any unique string (e.g. <code>{{APPID_SEGMENT}}-001</code>)</li>
+            <li>Bundle ID: <code>org.workshopdiy.aqidatalmuslim</code> (must match what's in Xcode)</li>
+            <li>SKU: any unique string (e.g. <code>aqidatalmuslim-001</code>)</li>
             <li>User Access: Full Access</li>
           </ul>
         </li>
@@ -2643,7 +2643,7 @@ versionName "1.1"</pre>
 
 <!-- ======================================================== FOOTER -->
 <footer>
-  <div>Generated as part of the <strong>{{APP_NAME}} → Android</strong> session · 24 April 2026</div>
+  <div>Generated as part of the <strong>Aqidat al-Muslim → Android</strong> session · 24 April 2026</div>
   <div class="ar">رحم الله الشيخ محمد الغزالي وجزاه عنا خير الجزاء 🤲</div>
   <div>Powered by <a href="https://workshop-diy.org">workshop-diy.org</a></div>
 </footer>

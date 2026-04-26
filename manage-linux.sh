@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================================
-#  {{APP_NAME}} Android · management console · LINUX
+#  Aqidat al-Muslim Android · management console · LINUX
 #  Companion script for WORKSHOP.html — check, install, build, test, publish
 #  Supports: Debian/Ubuntu (apt), Fedora/RHEL (dnf), Arch (pacman)
 # ============================================================================
@@ -10,11 +10,11 @@ set -u
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ANDROID_DIR="$PROJECT_DIR/android"
 WWW_DIR="$PROJECT_DIR/www"
-SRC_BOOK_DIR="${SRC_BOOK_DIR:-$HOME/koutoub/{{KOUTOUB_DIR}}}"
+SRC_BOOK_DIR="${SRC_BOOK_DIR:-$HOME/koutoub/18-aqidat-al-muslim}"
 KEYSTORE_DIR="${KEYSTORE_DIR:-$HOME/.keys}"
 KEYSTORE_FILE="${KEYSTORE_FILE:-$KEYSTORE_DIR/wdiy-upload.keystore}"
-APP_ID="${APP_ID:-org.workshopdiy.{{APPID_SEGMENT}}}"
-AVD_NAME="${AVD_NAME:-{{AVD_NAME}}}"
+APP_ID="${APP_ID:-org.workshopdiy.aqidatalmuslim}"
+AVD_NAME="${AVD_NAME:-aqidat_al_muslim_test}"
 
 # ---------- detect distro ----------
 if   command -v apt-get >/dev/null 2>&1; then PKG_MGR="apt";    PKG_INSTALL="sudo apt-get install -y"
@@ -311,7 +311,7 @@ cmd_install() {
 cmd_test() {
   head1 "Screenshot current screen"
   adb devices | tail -n +2 | grep -qv '^$' || { err "No device."; pause; return; }
-  local out="/tmp/{{SLUG}}-$(date +%Y%m%d-%H%M%S).png"
+  local out="/tmp/aqidat-al-muslim-$(date +%Y%m%d-%H%M%S).png"
   adb exec-out screencap -p > "$out"
   if [ -s "$out" ]; then
     ok "Saved: $out"
@@ -354,7 +354,7 @@ show_menu() {
   clear
   cat <<EOF
 ${BOLD}${MAGENTA}╔════════════════════════════════════════════════════════════════╗
-║   {{APP_NAME}} Android · management console (Linux · $PKG_MGR)${RESET}${BOLD}${MAGENTA}
+║   Aqidat al-Muslim Android · management console (Linux · $PKG_MGR)${RESET}${BOLD}${MAGENTA}
 ║   ${DIM}companion to WORKSHOP.html${RESET}${BOLD}${MAGENTA}
 ╚════════════════════════════════════════════════════════════════╝${RESET}
 
