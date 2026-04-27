@@ -29,5 +29,10 @@ render() {
 render "$SA/feature-graphic.html"        "$SA/feature-graphic.png"        1024 500
 render "$SA/play-store-icon-512.html"    "$SA/play-store-icon-512.png"     512 512
 
+# QR code for landing-page download tile
+if [ -x "$DIR/render-qr.sh" ]; then
+  "$DIR/render-qr.sh" || echo "  ! QR render skipped (python3 + qrcode lib needed)"
+fi
+
 echo
-echo "Done. Both PNGs are ready for Play Console upload."
+echo "Done. PNGs + QR ready."
